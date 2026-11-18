@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fct_pedidos
+    description: "Um registro por pedido, com valor total pago."
+    columns:
+      - name: pedido_id
+        description: "Chave primária do pedido."
+        data_tests: [unique, not_null]
+
+      - name: status
+        data_tests:
+          - accepted_values:
+              values: ['entregue', 'enviado', 'cancelado']
+
+      - name: cliente_id
+        data_tests:
+          - relationships:
+              to: ref('dim_clientes')
+              field: cliente_id
+
+  - name: dim_clientes
+    description: "Um registro por cliente, com métricas de compra."
+    columns:
+      - name: cliente_id
+        data_tests: [unique, not_null]

@@ -1,0 +1,5 @@
+id,cliente_id,data_pedido,status
+101,1,2025-04-01,entregue
+102,1,2025-04-20,entregue
+103,2,2025-05-02,cancelado
+104,3,2025-05-10,enviado

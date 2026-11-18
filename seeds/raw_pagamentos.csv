@@ -1,0 +1,5 @@
+id,pedido_id,metodo,valor_centavos
+1,101,pix,15000
+2,102,cartao,8990
+3,103,boleto,4500
+4,104,pix,12000
